@@ -1,0 +1,53 @@
+.custom-input-number {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.custom-input-number button {
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+    border: 1px solid rgb(30, 159, 210);
+    border-radius: 4px;
+    color: rgb(63, 181, 228);
+}
+
+.custom-input-number button:disabled {
+    opacity: 0.48;
+    cursor: not-allowed;
+}
+
+.custom-input-number input[type="number"] {
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    font-weight: normal;
+    font-size: 16px;
+    color: rgb(89, 89, 89);
+    -webkit-text-fill-color: rgb(89, 89, 89);
+    opacity: 1;
+    box-sizing: border-box;
+
+    line-height: calc(38px);
+    border: 1px solid rgb(191, 191, 191);
+    border-radius: 4px;
+}
+
+.custom-input-number input[type="number"]:focus-visible {
+    outline: none;
+}
+
+/* 隱藏數字輸入框的小箭頭 */
+/* Chrome, Safari, Edge, Opera */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}

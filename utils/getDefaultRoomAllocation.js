@@ -70,14 +70,17 @@ export function getDefaultRoomAllocation(guest, rooms) {
             return;
         }
 
+        const room = rooms[idx];
         // 遍歷所有可能的成人數量  0 到 adultLeft
         for (let adults = 0; adults <= adultLeft; adults++) {
             // 遍歷所有可能的兒童數量 0 到 childLeft
             for (let children = 0; children <= childLeft; children++) {
                 // 如果當前房間分配 沒有成人 有兒童 跳過
                 if (children > 0 && adults === 0) continue;
+
+                const roomCost = room.roomPrice + (room.adultPrice * adults) + (room.childPrice * children);
                 // 增加目前房間分配
-                allocation.push({ adult: adults, child: children });
+                allocation.push({ adult: adults, child: children, price: roomCost });
                 // 處理下一個房間 遞迴  並更新剩餘的成人和兒童數量
                 backtrack(allocation, adultLeft - adults, childLeft - children, idx + 1);
                 // 移除當前房間分配 保持一致性

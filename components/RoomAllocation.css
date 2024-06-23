@@ -1,0 +1,54 @@
+.room-allocation-container {
+    background-color: white;
+    padding: 16px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.room-allocation-header {
+    color: #1a202c;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.unassigned-section {
+    background-color: #ebf8ff;
+    color: #2d3748;
+    padding: 8px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.unassigned-section p {
+    font-weight: 600;
+    margin-right: 16px;
+}
+
+.room-details {
+    margin-top: 16px;
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.room-title {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.room-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.adult-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.room-item+.room-item {
+    margin-top: 8px;
+}
